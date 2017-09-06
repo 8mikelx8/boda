@@ -23,11 +23,29 @@
                 font-weight: 200;
                 margin-bottom: 0;
             }
+            img {
+              max-width: 60%;
+            }
         </style>
     </head>
     <body>
-        <h1>Nivell 1</h1>
-        <img src="../assets/imatges/nivell1.jpg" />
-        <p>UOO!  Pot ser que el regal sigui alguna cosa més que una pàgina estàtica?!</p>
+      <?php
+        if (isset($post['password']) && $post['password'] === 'coronel') {
+       ?>
+        <h1>Nivell 12</h1>
+        <audio loop autoplay>
+          <source src="../assets/audios/nivell12.ogg" type="audio/ogg">
+        </audio>
+        <form action="13" method="post">
+          <label for="pwd">Per obligació(Jo no volia): Nom complert</label> <input id="pwd" type="text" name="password"/>
+        </form>
+      <?php
+    } else {
+       ?>
+       <h1>Pero que esteu fent?!?!?</h1>
+       <p> sigui el que sigui, sembla que així no funciona</p>
+       <?php
+     }
+        ?>
     </body>
 </html>

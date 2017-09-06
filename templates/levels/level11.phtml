@@ -23,11 +23,27 @@
                 font-weight: 200;
                 margin-bottom: 0;
             }
+            img {
+              max-width: 60%;
+            }
         </style>
     </head>
     <body>
-        <h1>Nivell 1</h1>
-        <img src="../assets/imatges/nivell1.jpg" />
-        <p>UOO!  Pot ser que el regal sigui alguna cosa més que una pàgina estàtica?!</p>
+      <?php
+        if (isset($post['password']) && $post['password'] === 'd') {
+       ?>
+        <h1>Nivell 11</h1>
+        <img src="../assets/imatges/nivell11.jpg" />
+        <form action="12" method="post">
+          <label for="pwd">Donà la vida per nosaltres i se'l va castigar amb l'exili</label> <input id="pwd" type="text" name="password"/>
+        </form>
+      <?php
+    } else {
+       ?>
+       <h1>Pero que esteu fent?!?!?</h1>
+       <p> sigui el que sigui, sembla que així no funciona</p>
+       <?php
+     }
+        ?>
     </body>
 </html>
